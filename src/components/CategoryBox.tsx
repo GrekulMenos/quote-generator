@@ -11,7 +11,7 @@ const CategoryBox = ({ setCategory }: CategoryProps) => {
   return (
     <Listbox value={selectedCategory} onChange={setSelectedCategory}>
       <h2 className="mt-4">Change Category for Quote</h2>
-      <Listbox.Button className="mt-4 border p-3 rounded-md w-full bg-purple-700 font-bold">
+      <Listbox.Button className="mt-4 hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  p-3 rounded-md w-full  font-bold bg-purple-500 hover:transition-colors duration-300">
         {selectedCategory.category}
       </Listbox.Button>
       <Listbox.Options className="cursor-pointer  mt-4 p-3 rounded-md w-full  font-bold">

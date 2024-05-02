@@ -20,7 +20,9 @@ export interface DataProps {
   category: string;
 }
 
-export interface Data {
+export interface DowloandProps {
+  setDisabledBtn: (bol: boolean) => void;
+  disabledBtn: boolean;
   data: {
     quote: string;
     author: string;

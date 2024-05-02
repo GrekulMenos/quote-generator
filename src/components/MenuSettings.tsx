@@ -3,6 +3,7 @@
 import { getDataProps } from "@/types/getDataProps";
 import CategoryBox from "./CategoryBox";
 import Dowloand from "./Dowloand";
+import { useState } from "react";
 
 const MenuSettings = ({
   getData,
@@ -11,11 +12,16 @@ const MenuSettings = ({
   setCategory,
   data,
 }: getDataProps) => {
+  const [disabledBtn, setDisabledBtn] = useState(true);
+
   return (
     <div className="text-white">
       <button
-        onClick={() => getData()}
-        className="p-4 bg-white text-purple-500 rounded-md border-none outline-none"
+        onClick={() => {
+          getData();
+          setDisabledBtn(false);
+        }}
+        className="p-4 bg-white text-purple-500 font-bold hover:bg-black hover:transition-colors duration-200 rounded-md border-none outline-none"
       >
         Generate Qoute
       </button>
@@ -31,7 +37,11 @@ const MenuSettings = ({
         ))}
       </div>
       <CategoryBox setCategory={setCategory} />
-      <Dowloand data={data} />
+      <Dowloand
+        disabledBtn={disabledBtn}
+        setDisabledBtn={setDisabledBtn}
+        data={data}
+      />
     </div>
   );
 };
