@@ -2,18 +2,20 @@
 
 import { getDataProps } from "@/types/getDataProps";
 import CategoryBox from "./CategoryBox";
+import Dowloand from "./Dowloand";
 
 const MenuSettings = ({
   getData,
   arrayColorsBG,
   setColor,
   setCategory,
+  data,
 }: getDataProps) => {
   return (
     <div className="text-white">
       <button
         onClick={() => getData()}
-        className="p-4 bg-white text-purple-500 rounded-md"
+        className="p-4 bg-white text-purple-500 rounded-md border-none outline-none"
       >
         Generate Qoute
       </button>
@@ -29,6 +31,7 @@ const MenuSettings = ({
         ))}
       </div>
       <CategoryBox setCategory={setCategory} />
+      <Dowloand data={data} />
     </div>
   );
 };

@@ -10,6 +10,7 @@ const CategoryBox = ({ setCategory }: CategoryProps) => {
 
   return (
     <Listbox value={selectedCategory} onChange={setSelectedCategory}>
+      <h2 className="mt-4">Change Category for Quote</h2>
       <Listbox.Button className="mt-4 border p-3 rounded-md w-full bg-purple-700 font-bold">
         {selectedCategory.category}
       </Listbox.Button>

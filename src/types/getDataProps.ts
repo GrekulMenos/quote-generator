@@ -3,6 +3,11 @@ export interface getDataProps {
   arrayColorsBG: string[];
   setColor: (colors: string) => void;
   setCategory: (category: string) => void;
+  data: {
+    quote: string;
+    author: string;
+    category: string;
+  };
 }
 
 export interface DataProps {
@@ -13,4 +18,12 @@ export interface DataProps {
     category: string;
   };
   category: string;
+}
+
+export interface Data {
+  data: {
+    quote: string;
+    author: string;
+    category: string;
+  };
 }

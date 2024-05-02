@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuSettings from "./MenuSettings";
 import QuoteImage from "./QuoteImage";
 import { DataProps, getDataProps } from "@/types/getDataProps";
@@ -29,12 +29,11 @@ const ImageContainer = () => {
     setData(data[0]);
   };
 
-  console.log(category);
-
   return (
     <div className="flex justify-between max-w-6xl   mx-auto">
-      <QuoteImage category={category} color={color} data={data} />
+      <QuoteImage color={color} category={category} data={data} />
       <MenuSettings
+        data={data}
         setCategory={setCategory}
         arrayColorsBG={arrayColorsBG}
         setColor={setColor}

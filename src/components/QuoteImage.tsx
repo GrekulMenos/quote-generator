@@ -17,7 +17,9 @@ const QuoteImage = ({ data, color, category }: DataProps) => {
       </div>
       <div>
         <p className="max-w-[450px] fond-bold text-[25px] text-center">
-          {data.quote}
+          {data.quote || data === undefined
+            ? `${data.quote}`
+            : "Generate Quote"}
         </p>
       </div>
 
