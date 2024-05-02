@@ -5,6 +5,7 @@ import MenuSettings from "./MenuSettings";
 import QuoteImage from "./QuoteImage";
 import { DataProps, getDataProps } from "@/types/getDataProps";
 import { arrayColorsBG } from "@/utils/bgArray";
+import toast, { Toaster } from "react-hot-toast";
 
 const ImageContainer = () => {
   const [data, setData] = useState<DataProps[]>([]);
@@ -17,6 +18,11 @@ const ImageContainer = () => {
         headers: { "X-Api-Key": `biw3Cc+5APzPC95syqlRKg==GPILym2r03XXO9If` },
       }
     );
+    if (res.ok) {
+      toast.success("success");
+    } else {
+      toast.error("Error!");
+    }
 
     const data = await res.json();
     setData(data[0]);
@@ -30,6 +36,7 @@ const ImageContainer = () => {
         setColor={setColor}
         getData={getData}
       />
+      <Toaster toastOptions={{ duration: 3000 }} position="bottom-center" />
     </div>
   );
 };
