@@ -1,10 +1,10 @@
 "use client";
 
 import { DataProps } from "@/types/getDataProps";
+import { category } from "@/utils/bgArray";
 import Image from "next/image";
 
-const QuoteImage = ({ data, color }: DataProps) => {
-  console.log(data.category);
+const QuoteImage = ({ data, color, category }: DataProps) => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}

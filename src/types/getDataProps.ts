@@ -2,6 +2,7 @@ export interface getDataProps {
   getData: () => Promise<void>;
   arrayColorsBG: string[];
   setColor: (colors: string) => void;
+  setCategory: (category: string) => void;
 }
 
 export interface DataProps {
@@ -11,4 +12,5 @@ export interface DataProps {
     author: string;
     category: string;
   };
+  category: string;
 }

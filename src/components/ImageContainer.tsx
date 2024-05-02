@@ -10,10 +10,11 @@ import toast, { Toaster } from "react-hot-toast";
 const ImageContainer = () => {
   const [data, setData] = useState<DataProps[]>([]);
   const [color, setColor] = useState<string[] | string>("white");
+  const [category, setCategory] = useState<string>("success");
 
   const getData = async () => {
     const res = await fetch(
-      `https://api.api-ninjas.com/v1/quotes?category=success`,
+      `https://api.api-ninjas.com/v1/quotes?category=${category}`,
       {
         headers: { "X-Api-Key": `biw3Cc+5APzPC95syqlRKg==GPILym2r03XXO9If` },
       }
@@ -28,10 +29,13 @@ const ImageContainer = () => {
     setData(data[0]);
   };
 
+  console.log(category);
+
   return (
     <div className="flex justify-between max-w-6xl   mx-auto">
-      <QuoteImage color={color} data={data} />
+      <QuoteImage category={category} color={color} data={data} />
       <MenuSettings
+        setCategory={setCategory}
         arrayColorsBG={arrayColorsBG}
         setColor={setColor}
         getData={getData}
