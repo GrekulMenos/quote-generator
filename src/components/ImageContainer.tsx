@@ -8,7 +8,7 @@ import { arrayColorsBG } from "@/utils/bgArray";
 import toast, { Toaster } from "react-hot-toast";
 
 const ImageContainer = () => {
-  const [data, setData] = useState<DataProps[]>([]);
+  const [data, setData] = useState<any>([]);
   const [color, setColor] = useState<string[] | string>("white");
   const [category, setCategory] = useState<string>("success");
 
