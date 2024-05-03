@@ -5,3 +5,7 @@ export interface CategoryProps {
 export interface FormatListProps {
   setFormatType: (formam: string) => void;
 }
+
+export interface ImageContainerProps {
+  locale: string;
+}

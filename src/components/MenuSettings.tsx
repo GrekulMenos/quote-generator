@@ -25,7 +25,7 @@ const MenuSettings = ({
         }}
         className="p-4 bg-white text-purple-500 font-bold hover:bg-black hover:transition-colors duration-200 rounded-md border-none outline-none"
       >
-        Generate Qoute
+        Generate Quote
       </button>
       <h2 className="mt-4">Color Theme</h2>
       <div className="flex space-x-4">

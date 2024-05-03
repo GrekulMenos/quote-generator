@@ -3,12 +3,7 @@ import { Listbox } from "@headlessui/react";
 import { MdFormatAlignJustify } from "react-icons/md";
 import { FormatListProps } from "@/types/interfaces";
 
-const formatItem = [
-  { id: 1, type: "pdf" },
-  { id: 2, type: "doc" },
-  { id: 3, type: "html" },
-  { id: 4, type: "docx" },
-];
+import { formatItem } from "@/utils/bgArray";
 
 const FormatList = ({ setFormatType }: FormatListProps) => {
   const [selectedPerson, setSelectedPerson] = useState(formatItem[0]);

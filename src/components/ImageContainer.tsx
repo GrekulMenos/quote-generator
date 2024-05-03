@@ -30,7 +30,7 @@ const ImageContainer = () => {
   };
 
   return (
-    <div className="flex justify-between max-w-7xl    mx-auto">
+    <div className="flex justify-between max-w-7xl m-5   mx-auto">
       <QuoteImage color={color} category={category} data={data} />
       <MenuSettings
         data={data}
