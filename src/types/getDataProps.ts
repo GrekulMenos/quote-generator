@@ -21,6 +21,7 @@ export interface DataProps {
 }
 
 export interface DowloandProps {
+  formatType: string;
   setDisabledBtn: (bol: boolean) => void;
   disabledBtn: boolean;
   data: {
